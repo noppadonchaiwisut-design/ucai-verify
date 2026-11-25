@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 520" width="1060" height="520">
+  <defs>
+    <style>
+      text { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+      .h1 { font-size: 19px; font-weight: 700; fill: #ffffff; }
+      .sub { font-size: 12.5px; fill: #cbd5e1; }
+      .st-h { font-size: 14px; font-weight: 700; fill: #ffffff; }
+      .bx-h { font-size: 13.5px; font-weight: 700; fill: #0f172a; }
+      .bx-t { font-size: 12px; fill: #334155; }
+      .tag { font-size: 11.5px; font-weight: 700; }
+    </style>
+    <marker id="ea-d" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#334155"/>
+    </marker>
+    <marker id="ea-r" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#dc2626"/>
+    </marker>
+    <marker id="ea-g" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0, 9 3.5, 0 7" fill="#059669"/>
+    </marker>
+  </defs>
+
+  <rect width="1060" height="520" rx="12" fill="#f8fafc"/>
+  <rect width="1060" height="68" rx="12" fill="#0f172a"/>
+  <rect y="44" width="1060" height="24" fill="#0f172a"/>
+  <text x="26" y="31" class="h1">Figure 1: ucai-verify v0.2.0 — Two-Stage Deterministic-First Hybrid Audit Architecture</text>
+  <text x="26" y="52" class="sub">Stage 1 ($0 API Cost, 0.0% FPR) Filters 60% of Claims Deterministically Before Stage 2 Semantic Polarity Verification</text>
+
+  <!-- Input -->
+  <rect x="22" y="132" width="166" height="165" rx="10" fill="#ffffff" stroke="#475569" stroke-width="2"/>
+  <rect x="22" y="132" width="166" height="32" rx="10" fill="#334155"/>
+  <rect x="22" y="150" width="166" height="14" fill="#334155"/>
+  <text x="105" y="153" text-anchor="middle" class="st-h">Input Claim (N=120)</text>
+  <text x="34" y="186" class="bx-h">Citation + Claim Tuple</text>
+  <text x="34" y="208" class="bx-t">• Title, Authors, Year</text>
+  <text x="34" y="228" class="bx-t">• DOI / arXiv Identifier</text>
+  <text x="34" y="248" class="bx-t">• Quantitative Metrics</text>
+  <text x="34" y="268" class="bx-t">• Directional Conclusion</text>
+
+  <line x1="188" y1="214" x2="216" y2="214" stroke="#334155" stroke-width="2.2" marker-end="url(#ea-d)"/>
+
+  <!-- Stage 1 -->
+  <rect x="222" y="90" width="372" height="276" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2.2"/>
+  <rect x="222" y="90" width="372" height="36" rx="12" fill="#1d4ed8"/>
+  <rect x="222" y="110" width="372" height="16" fill="#1d4ed8"/>
+  <text x="408" y="113" text-anchor="middle" class="st-h">Stage 1: Deterministic Engine ($0 Token | 0.15 s/item)</text>
+
+  <rect x="238" y="138" width="340" height="102" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.6"/>
+  <text x="250" y="160" class="bx-h" fill="#1e40af">1A. Version-Aware Multi-Source Citation Cascade</text>
+  <text x="250" y="180" class="bx-t">• Direct ID check (arXiv Atom + v1 fallback, Crossref DOI)</text>
+  <text x="250" y="198" class="bx-t">• Title fallback (Crossref + OpenAlex, max(SeqRatio, Jaccard))</text>
+  <text x="250" y="218" class="tag" fill="#047857">✓ 100% Recall on Ghost Titles &amp; Hijacked IDs (48/48)</text>
+
+  <rect x="238" y="250" width="340" height="104" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.6"/>
+  <text x="250" y="272" class="bx-h" font-size="12.6" fill="#1e40af">1B. Page-Indexed Cross-PDF Numeric &amp; Lexical Matcher</text>
+  <text x="250" y="292" class="bx-t">• PyMuPDF page index (168 OA PDFs); comma &amp; p%↔p/100 norm</text>
+  <text x="250" y="310" class="bx-t">• Full-corpus Cross-Artifact Misattribution scan + p.# trace</text>
+  <text x="250" y="330" class="tag" fill="#047857">✓ 100% Precision &amp; 0.0% FPR on VALID Claims (24/24)</text>
+
+  <!-- Caught by Stage 1 -->
+  <path d="M 408 366 L 408 432 L 854 432" stroke="#dc2626" stroke-width="2.4" stroke-dasharray="6,4" fill="none" marker-end="url(#ea-r)"/>
+  <rect x="428" y="400" width="364" height="25" rx="6" fill="#fee2e2" stroke="#fca5a5"/>
+  <text x="610" y="417" text-anchor="middle" class="tag" fill="#991b1b">72/120 Flagged Directly in Stage 1 (60.0% Stage-2 Call Reduction)</text>
+
+  <!-- Survivors to Stage 2 -->
+  <line x1="594" y1="228" x2="640" y2="228" stroke="#059669" stroke-width="2.4" marker-end="url(#ea-g)"/>
+  <rect x="598" y="196" width="40" height="23" rx="5" fill="#d1fae5"/>
+  <text x="618" y="212" text-anchor="middle" class="tag" fill="#065f46">48/120</text>
+
+  <!-- Stage 2 -->
+  <rect x="646" y="90" width="208" height="276" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="2.2"/>
+  <rect x="646" y="90" width="208" height="36" rx="12" fill="#059669"/>
+  <rect x="646" y="110" width="208" height="16" fill="#059669"/>
+  <text x="750" y="113" text-anchor="middle" class="st-h">Stage 2: Polarity Verifier</text>
+  <text x="658" y="148" class="bx-t" font-weight="700">Grounded on Stage-1 PDF</text>
+  <text x="658" y="165" class="bx-t">multi-page evidence snippets:</text>
+
+  <rect x="658" y="180" width="184" height="82" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="668" y="200" class="bx-h" fill="#065f46">Mode A: Local NLI ($0)</text>
+  <text x="668" y="218" class="bx-t">DeBERTa-v3-base CrossEnc</text>
+  <text x="668" y="238" class="tag" fill="#047857">F1 = 0.9362 (p = 0.0146)</text>
+  <text x="668" y="253" class="bx-t">100% Sovereign / Air-Gapped</text>
+
+  <rect x="658" y="272" width="184" height="82" rx="8" fill="#ffffff" stroke="#6ee7b7"/>
+  <text x="668" y="292" class="bx-h" fill="#065f46">Mode B: Scoped LLM</text>
+  <text x="668" y="310" class="bx-t">Gemini-Flash-Lite (48 calls)</text>
+  <text x="668" y="330" class="tag" fill="#047857">F1 = 0.9796 (p = 1e-6)</text>
+  <text x="668" y="345" class="bx-t">100% Defect Recall (96/96)</text>
+
+  <line x1="854" y1="228" x2="880" y2="228" stroke="#334155" stroke-width="2.2" marker-end="url(#ea-d)"/>
+
+  <!-- L2 HITL -->
+  <rect x="886" y="132" width="152" height="332" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2.2"/>
+  <rect x="886" y="132" width="152" height="36" rx="12" fill="#d97706"/>
+  <rect x="886" y="150" width="152" height="18" fill="#d97706"/>
+  <text x="962" y="155" text-anchor="middle" class="st-h">L2 HITL Gate</text>
+  <text x="962" y="194" text-anchor="middle" class="bx-h" fill="#92400e">Audit JSON Report</text>
+  <text x="898" y="218" class="bx-t">• Defect Classification</text>
+  <text x="898" y="238" class="bx-t">• Source Doc &amp; Page #</text>
+  <text x="898" y="258" class="bx-t">• Extracted Snippet</text>
+  <rect x="898" y="284" width="128" height="72" rx="8" fill="#fef3c7"/>
+  <text x="962" y="306" text-anchor="middle" class="tag" fill="#92400e">Human Sign-Off</text>
+  <text x="962" y="324" text-anchor="middle" class="bx-t">No autonomous</text>
+  <text x="962" y="340" text-anchor="middle" class="bx-t">misconduct sanction</text>
+  <text x="962" y="436" text-anchor="middle" class="tag" fill="#b91c1c">Block Hallucinations</text>
+  <text x="962" y="452" text-anchor="middle" class="bx-t">Pre-Publication</text>
+
+  <text x="530" y="498" text-anchor="middle" class="bx-t" fill="#475569">Evaluated on UCAI-CitationAudit-Bench-v1 (N = 120 balanced items across 5 classes; 100% clean API execution).</text>
+</svg>

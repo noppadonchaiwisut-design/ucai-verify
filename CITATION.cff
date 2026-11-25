@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "ucai-verify: Zero-Fake-Citation & Cross-Document Numeric Audit Engine"
+message: "If you use ucai-verify or UCAI-CitationAudit-Bench-v1 in your research, please cite it using the metadata below."
+type: software
+version: "0.2.0"
+date-released: "2026-11-24"
+license: MIT
+authors:
+  - family-names: "Chaiwisut"
+    given-names: "Noppadon"
+    email: "noppadon.chaiwisut@gmail.com"
+    orcid: "https://orcid.org/0009-0005-2881-8458"
+    affiliation: "Independent Researcher, Thailand"
+keywords:
+  - "citation verification"
+  - "hallucination detection"
+  - "ghost citations"
+  - "scientific claim verification"
+  - "numeric auditing"
+  - "AI co-scientist"
+  - "human-in-the-loop"
+  - "open science"
+abstract: >-
+  Deterministic bibliographic cascade (arXiv, Crossref, OpenAlex), page-indexed
+  cross-document PDF numeric matcher, and two-stage hybrid semantic polarity
+  verifier (Local DeBERTa-v3 NLI & Scoped LLM) for eliminating ghost citations
+  and cross-artifact numeric misattribution in AI-assisted scientific writing.
+  Ships with UCAI-CitationAudit-Bench-v1 (120 balanced cases across 5 defect classes).

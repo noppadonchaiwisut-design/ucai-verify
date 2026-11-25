@@ -1,0 +1,1095 @@
+{
+  "method": "self_critique (gemini-flash-lite-latest)",
+  "metrics": {
+    "n": 120,
+    "accuracy": 0.8083,
+    "precision": 0.823,
+    "recall": 0.9688,
+    "f1": 0.89,
+    "fpr": 0.8333,
+    "tp": 93,
+    "fp": 20,
+    "tn": 4,
+    "fn": 3,
+    "accuracy_ci95": [
+      0.7333,
+      0.875
+    ],
+    "precision_ci95": [
+      0.7436,
+      0.8919
+    ],
+    "recall_ci95": [
+      0.9307,
+      1.0
+    ],
+    "f1_ci95": [
+      0.8431,
+      0.9309
+    ],
+    "fpr_ci95": [
+      0.6667,
+      0.9615
+    ],
+    "clean_ok": 120,
+    "error_count": 0,
+    "llm_api_calls": 120,
+    "wall_elapsed_sec": 843.574,
+    "sec_per_item": 9.0676
+  },
+  "per_class": {
+    "BAD_DOI_ARXIV_ID": {
+      "n": 24,
+      "correct": 24,
+      "acc": 1.0
+    },
+    "FAKE_AUTHOR_TITLE": {
+      "n": 24,
+      "correct": 24,
+      "acc": 1.0
+    },
+    "NUMERIC_MISATTRIBUTION": {
+      "n": 24,
+      "correct": 22,
+      "acc": 0.9167
+    },
+    "POLARITY_REVERSAL": {
+      "n": 24,
+      "correct": 23,
+      "acc": 0.9583
+    },
+    "VALID": {
+      "n": 24,
+      "correct": 4,
+      "acc": 0.1667
+    }
+  },
+  "records": [
+    {
+      "item_id": "UCAI-BENCH-001",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 1.032,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The claim is partially incorrect. While 'The AI Scientist' paper (Lu et al., 2024) does generate full ML research papers for under $15 in API costs, the evaluation metric and score mentioned ('0.65 balanc"
+    },
+    {
+      "item_id": "UCAI-BENCH-002",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"While the paper 'Towards an AI co-scientist' (arXiv:2502.18864) and its authors exist, the specific claim regarding '78.4% top-1 accuracy on GPQA Diamond and demonstrates an 18-fold therapeutic window "
+    },
+    {
+      "item_id": "UCAI-BENCH-003",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The citation refers to the correct paper (arXiv:2409.13740), but the claim misrepresents the data. In the paper, PaperQA2 achieves 66.0% accuracy on LitQA2, which surpasses the *human baseline* which i"
+    },
+    {
+      "item_id": "UCAI-BENCH-004",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The claim misattributes the results. In the ScienceAgentBench paper (Chen et al., 2024/2025), Claude-3.5-Sonnet under Self-Debug *with* expert knowledge achieves 22.9% success rate and 84.0% valid exec"
+    },
+    {
+      "item_id": "UCAI-BENCH-005",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv ID (2506.08140) refers to a future or non-existent paper, as arXiv IDs do not currently use the '2506' prefix (June 2025). Furthermore, the specific details regarding AutoSDT-5K, task counts,"
+    },
+    {
+      "item_id": "UCAI-BENCH-006",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv ID (2505.19955) and DOI correspond to a future date (May 2025), which does not exist yet. Additionally, the specific claim about 'AI Scientist V2' producing 100% faked experimental results on"
+    },
+    {
+      "item_id": "UCAI-BENCH-007",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.463,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a future date (2026) and a future arXiv identifier/DOI that do not exist, and the specific claims about auditing 111 million references are fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-008",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.697,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID and DOI (2605.27700) feature a future date (month 05 of year 2026), and this specific paper with these authors and exact metrics does not exist in the scientific literature.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-009",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.891,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation and claim contain several anachronisms and anomalies: the year is listed as 2026, the arXiv ID format (2605.25415) corresponds to a future date not yet reached, and models like GPT-5.4 do not"
+    },
+    {
+      "item_id": "UCAI-BENCH-010",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.701,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2605.26730) and publication year (2026) are from the future. arXiv IDs follow the format YYMM.##### where YYMM is the submission year and month (up to the current date in 2024).\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-011",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.598,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation references a futuristic year (2026) and a non-existent arXiv ID (2610.23480, where the month 10 and year 26 are out of range for current dates), making this a fabricated reference.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-012",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.679,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID 2511.02824 corresponds to a future/non-existent date (November 2025), and the authors and specific claim do not correspond to a verified real paper matching this exact title and stats.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-013",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 0,
+      "clean_ok": true,
+      "latency_sec": 52.454,
+      "raw_reply": "{\"corrupted\": false, \"reason\": \"The citation correctly references the paper 'The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery' by Lu et al. (2024), and the claim accurately reflects the paper's stated findings regar"
+    },
+    {
+      "item_id": "UCAI-BENCH-014",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 0,
+      "clean_ok": true,
+      "latency_sec": 0.778,
+      "raw_reply": "{\n  \"corrupted\": false,\n  \"reason\": \"The citation matches the arXiv preprint 'Towards an AI co-scientist' (arXiv:2502.18864) by Gottweis et al., and the specific claims regarding the GPQA Diamond benchmark performance and the therapeutic wi"
+    },
+    {
+      "item_id": "UCAI-BENCH-015",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 0,
+      "clean_ok": true,
+      "latency_sec": 0.599,
+      "raw_reply": "{\n  \"corrupted\": false,\n  \"reason\": \"The citation matches a real arXiv preprint (arXiv:2409.13740) by Skarlinski et al. (2024), and the claim correctly reflects the reported performance of PaperQA2 on LitQA2 in the paper.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-016",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 0,
+      "clean_ok": true,
+      "latency_sec": 0.506,
+      "raw_reply": "{\"corrupted\": false, \"reason\": \"The citation details, authors, arXiv ID, and reported metrics for Claude-3.5-Sonnet under Self-Debug in ScienceAgentBench match the published paper.\"}"
+    },
+    {
+      "item_id": "UCAI-BENCH-017",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.807,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2506.08140) and DOI correspond to a future/non-existent date (June 2025), and the paper 'AutoSDT' along with its specific metrics (AutoSDT-5K, $0.55 per task) is a fabricated or hallucinated"
+    },
+    {
+      "item_id": "UCAI-BENCH-018",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.765,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The arXiv ID and DOI (2505.19955) correspond to a futuristic or non-existent date (May 2025, while the current date is earlier), and the specific claim about 'AI Scientist V2' producing 100% faked experimental"
+    },
+    {
+      "item_id": "UCAI-BENCH-019",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.66,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a futuristic arXiv identifier and publication year (2026) for a paper making specific claims about events in 2025, which does not exist in the real world.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-020",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.903,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2605.27700) uses a future date format (year 26, month 05) which does not exist, and the paper details do not correspond to a real published academic work with these exact metrics.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-021",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 6.498,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains several anachronisms and anomalies: the year is set in the future (2026), the arXiv ID features an impossible/unassigned future sequence, and models such as GPT-5.4 do not exist. Fur"
+    },
+    {
+      "item_id": "UCAI-BENCH-022",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.465,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2605.26730) and the year (2026) are in the future relative to the current time, and this paper and benchmark do not exist in the academic literature.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-023",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.509,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation references a future date (2026) and an arXiv ID (2610.23480) that does not exist. Furthermore, 'Qwen3.8-27B' is a fictitious model version.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-024",
+      "label_class": "VALID",
+      "is_corrupted": 0,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.506,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The arXiv ID and publication year (2511.02824) are from the future, making the citation and claim fabricated.\"}"
+    },
+    {
+      "item_id": "UCAI-BENCH-025",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv identifier (2699.90000) is outside the valid range for arXiv papers, and the citation refers to a fabricated paper and authors.\"}\n```"
+    },
+    {
+      "item_id": "UCAI-BENCH-026",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The citation is fabricated. The arXiv ID (2699.90001) and the publication year (2026) are invalid/future, and the paper 'ZeroHalluc: End-to-End Self-Correcting Bibliographies via Hyperbolic Graphs' by "
+    },
+    {
+      "item_id": "UCAI-BENCH-027",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.652,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation features a futuristic arXiv ID (2699.90002) indicating a year 2026/2699 which does not exist yet, and the claim of 'Eliminating All Citation Errors Without External APIs' combined with '99.1%"
+    },
+    {
+      "item_id": "UCAI-BENCH-028",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The citation refers to a nonexistent arXiv ID (2699.90003, with an implausible year prefix 26) and a fabricated paper titled 'NeuroCite: Neural Checksums for Peer Review Integrity in Biomedicine'.\"}\n``"
+    },
+    {
+      "item_id": "UCAI-BENCH-029",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv identifier (arXiv:2699.90004) points to a future year (2699) and is entirely fictitious, meaning the paper, authors, and specific claim do not exist.\"}\n```"
+    },
+    {
+      "item_id": "UCAI-BENCH-030",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The citation features a fake arXiv ID (2699.90005) from the future (2699), and the authors and paper title appear to be fabricated hallucinations.\"}\n```"
+    },
+    {
+      "item_id": "UCAI-BENCH-031",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.569,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation and claim reference a non-existent paper and an impossible arXiv ID (2699.90006, which is out of the current numbering scheme).\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-032",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 17.055,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The citation contains a non-existent arXiv identifier (2699.90007, where the year prefix 26 is invalid for current arXiv numbering conventions and sequence numbers do not reach 99900+ for future years) and ref"
+    },
+    {
+      "item_id": "UCAI-BENCH-033",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.59,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2699.90008) is from the far future and invalid, and the paper 'CiteShield: Cryptographic Watermarking for LLM Literature Synthesis' by V. Subramanian, T. Müller, and J. Ortiz (2025) does not"
+    },
+    {
+      "item_id": "UCAI-BENCH-034",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 4.289,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a futuristic arXiv ID (2699.90009 indicating the year 2026), and the claim attributes an audit accuracy of 99.1% across 500 papers to a paper about predicting LLM hallucination rates"
+    },
+    {
+      "item_id": "UCAI-BENCH-035",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.831,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2699.90010) uses a future year/number sequence that does not exist, and the paper 'PeerOracle: Replacing Human Program Chairs with Consensus Transformers' is a fabricated citation.\"\n"
+    },
+    {
+      "item_id": "UCAI-BENCH-036",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.328,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation features a non-existent arXiv ID (2699.90011, which uses a future year and out-of-range sequence number) and a claim attributed to a fictitious paper combining wet-lab robotics with paper aud"
+    },
+    {
+      "item_id": "UCAI-BENCH-037",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.43,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2699.90012) is from a futuristic or non-existent year (2699), making the citation and its claims fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-038",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.844,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation features a non-existent arXiv ID (2699.90013, which uses an out-of-range year and number) and refers to a future year (2026) with a fictional paper title and authors.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-039",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.521,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2699.90014) is in the future and does not exist, as current arXiv IDs do not reach the 2600 series, and the paper title appears to be a fabricated or hallucinated benchmark title.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-040",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 46.616,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The arXiv identifier (2699.90015) uses a future-dated series (2699) that does not exist, and the paper 'NeuroCite: Neural Checksums for Peer Review Integrity in Biomedicine' is a fabricated or non-existent cit"
+    },
+    {
+      "item_id": "UCAI-BENCH-041",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.846,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2699.90016) is in the future and does not exist, and the paper 'DeepRef: Zero-Shot Detection of Synthetic Tables in Nature Journals' is a hallucinated/fake citation.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-042",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.466,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a futuristic arXiv ID (2699.90017) and refers to a nonexistent paper and authors published in the year 2026, making it fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-043",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.386,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation features a futuristic arXiv ID (2699.90018) from the year 2026, and the paper 'BiblioProof: Formal SMT Verification of BibTeX Entries at Scale' is a fabricated publication.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-044",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 1.247,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation references a futuristic year (2026) and an invalid arXiv identifier format (arXiv:2699.90019, as arXiv identifiers do not use the 2699 series), indicating a hallucinated or fabricated paper.\""
+    },
+    {
+      "item_id": "UCAI-BENCH-045",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 1.011,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2699.90020) is in the future and does not exist, and the paper 'CiteShield: Cryptographic Watermarking for LLM Literature Synthesis' by V. Subramanian, T. Müller, and J. Ortiz (2025) is a fa"
+    },
+    {
+      "item_id": "UCAI-BENCH-046",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.731,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation features a futuristic arXiv ID (2699.90021) set in 2026, and the claim nonsensically applies a paper about hallucination rates in language models to having '99.1% audit accuracy across 500 pa"
+    },
+    {
+      "item_id": "UCAI-BENCH-047",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.625,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2699.90022) and year (2025) are from the future, and the paper 'PeerOracle: Replacing Human Program Chairs with Consensus Transformers' is a fictitious or hallucinated citation.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-048",
+      "label_class": "FAKE_AUTHOR_TITLE",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.801,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a futuristic year (2026) and a non-existent arXiv ID format (2699.90023, as arXiv IDs use YYMM format where YY cannot be 99). Furthermore, the paper and authors appear to be fabricat"
+    },
+    {
+      "item_id": "UCAI-BENCH-049",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"While the paper title, authors, DOI, and arXiv ID are correct, the claim is inaccurate regarding the ICLR score. The AI Scientist evaluated its generated papers using an automated reviewer system calib"
+    },
+    {
+      "item_id": "UCAI-BENCH-050",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The citation contains fabricated metadata: the authors, DOI (10.1109/FAKE...), and arXiv ID (2599.88001) are fake, and the claims mix up results from distinct AI research (such as Google's AI Co-Scient"
+    },
+    {
+      "item_id": "UCAI-BENCH-051",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv ID (2505.19955) and DOI (10.48550/arXiv.2505.19955) feature a future date (May 2025), which is impossible for a paper published prior to this check.\"}\n```"
+    },
+    {
+      "item_id": "UCAI-BENCH-052",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv ID (2599.88003) and DOI (10.1109/FAKE.202503) are fake/hallucinated, and the authors and metrics do not match the actual ScienceAgentBench paper (which is an ICLR 2024 / arXiv:2310.04791 work"
+    },
+    {
+      "item_id": "UCAI-BENCH-053",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv identifier (2605.27700) points to a future date (May 2026), making the paper and its specific metrics fabricated.\"}\n```"
+    },
+    {
+      "item_id": "UCAI-BENCH-054",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv ID (2599.88005) and DOI (10.1109/FAKE.202505) are fabricated, and the specific claim regarding 'AI Scientist V2' producing 100% faked results on ICLR 2025 tasks appears to be a hallucinated o"
+    },
+    {
+      "item_id": "UCAI-BENCH-055",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.026,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a futuristic publication date (2026), an invalid arXiv identifier format (arXiv:2605.26730 for a date in May 2026, which is in the future), and specific fabricated metric claims that"
+    },
+    {
+      "item_id": "UCAI-BENCH-056",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 1.129,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains suspicious metadata (future years like 2026, improbable arXiv and DOI numbers) and appears to be a hallucinated or fabricated academic reference.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-057",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.883,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation references a futuristic arXiv ID (2511.02824) and year (2026), and GPT-5.4 does not exist at this time. Furthermore, the specific empirical claim regarding prompt injection success rates on s"
+    },
+    {
+      "item_id": "UCAI-BENCH-058",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.922,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The DOI prefix 10.1109/FAKE is fictitious, the year 2026 for a published paper along with arXiv:2599.88009 are anachronistic/invalid, and the benchmark 'PRISM' with these specific authors and metrics does"
+    },
+    {
+      "item_id": "UCAI-BENCH-059",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.605,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID 2502.18864, the paper title 'MuninAI: A Self-Hosted Agentic Framework for Independent Research Groups' by M. Fischer et al., and the specific benchmark claims are fabricated. The year 2026 is"
+    },
+    {
+      "item_id": "UCAI-BENCH-060",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.63,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains fake identifiers (DOI 10.1109/FAKE.202511, arXiv: 2599.88011) and the authors/paper title combination does not correspond to a real published work in the academic literature as of cu"
+    },
+    {
+      "item_id": "UCAI-BENCH-061",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 1.0,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation correctly identifies the paper 'The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery' by Lu et al. (2024), but the claim contains inaccurate metrics. The paper reports an"
+    },
+    {
+      "item_id": "UCAI-BENCH-062",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.658,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains fabricated metadata (fake DOI 10.1109/FAKE.202513 and fake arXiv ID 2599.88013). While 'AI Co-Scientist' is a real concept developed by researchers including some named individuals, "
+    },
+    {
+      "item_id": "UCAI-BENCH-063",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 107.26,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The arXiv ID/DOI provided (2505.19955) indicates a date in May 2025, which is in the future relative to the current date. Additionally, the specific claims and paper details do not correspond to a verified, pu"
+    },
+    {
+      "item_id": "UCAI-BENCH-064",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.695,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2599.88015) and DOI (10.1109/FAKE.202515) are fabricated and do not exist. ScienceAgentBench is a real benchmark, but the specific metrics and identifier combinations provided are incorrect."
+    },
+    {
+      "item_id": "UCAI-BENCH-065",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.691,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2605.27700) is in the future and invalid, and the specific claims and paper details do not correspond to a verified real publication.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-066",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.655,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The DOI prefix (1109/FAKE) and the arXiv ID (2599.88017, out of range for current arXiv numbering) are fabricated, and the specific extreme claim regarding 'AI Scientist V2' producing 100% faked results d"
+    },
+    {
+      "item_id": "UCAI-BENCH-067",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.316,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a future year (2026), an invalid arXiv identifier format with a future month (2605), and implausible specific metrics that do not correspond to any known verified real paper by these"
+    },
+    {
+      "item_id": "UCAI-BENCH-068",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.656,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The citation contains nonexistent arXiv and DOI identifiers (e.g., arXiv: 2599.88019), and the authors and metrics do not correspond to a real published paper under this title and date (2026).\"}"
+    },
+    {
+      "item_id": "UCAI-BENCH-069",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.697,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID and DOI point to a future date (November 2025/2026), and GPT-5.4 is a fictional model version. The citation is fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-070",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.495,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains fake identifiers (DOI 10.1109/FAKE..., arXiv: 2599.88021 from a future/non-existent year/series) and fictitious authors and metrics.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-071",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.3,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID 2502.18864, the paper title 'MuninAI: A Self-Hosted Agentic Framework for Independent Research Groups' by M. Fischer, J. Meiler, M. Elgeti, and the specific claim about Qwen3.8-27B scoring 87"
+    },
+    {
+      "item_id": "UCAI-BENCH-072",
+      "label_class": "BAD_DOI_ARXIV_ID",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.71,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a fake DOI (10.1109/FAKE.202523) and a non-existent arXiv ID (2599.88023) for a paper with fabricated authors and details.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-073",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The citation correctly refers to 'The AI Scientist' paper by Lu et al. (2024), but the claim mixes up achievements from Google DeepMind's 'AI Co-Scientist' (which is a different system and achieves num"
+    },
+    {
+      "item_id": "UCAI-BENCH-074",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"While the paper 'Towards an AI co-scientist' (arXiv:2502.18864) by Gottweis et al. exists, the claim that it achieves '98.4% top-1 accuracy on GPQA Diamond and demonstrates an 18-fold therapeutic windo"
+    },
+    {
+      "item_id": "UCAI-BENCH-075",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 0,
+      "clean_ok": true,
+      "latency_sec": 0.784,
+      "raw_reply": "{\"corrupted\": false, \"reason\": \"The citation matches arXiv:2409.13740 by Skarlinski et al. (2024), and the reported metrics for Claude-3.5-Sonnet under Self-Debug without expert knowledge (22.9% success rate and 84.0% valid execution rate) "
+    },
+    {
+      "item_id": "UCAI-BENCH-076",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The ScienceAgentBench paper reports a 29.2% success rate and 84.0% valid execution rate for Claude-3.5-Sonnet under Self-Debug without expert knowledge, not 92.9% success.\"}\n```"
+    },
+    {
+      "item_id": "UCAI-BENCH-077",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The citation contains a futuristic arXiv ID (2506.08140, indicating June 2025) and attributes an implausible claim about 'AI Scientist V2' producing 100% faked results across ICLR 2025 tasks, which doe"
+    },
+    {
+      "item_id": "UCAI-BENCH-078",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv ID (2505.19955) and the year 2025 are from the future, and the specific experimental claim regarding 'AI Scientist V2' producing 12% faked results and 90% hallucinated methodology on ICLR 202"
+    },
+    {
+      "item_id": "UCAI-BENCH-079",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.689,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a futuristic arXiv ID (2605.07723) and publication year (2026), which do not exist. Furthermore, the specific metrics (88.7% Macro-F1, 88.9% accuracy, 8.72 seconds latency) appear to"
+    },
+    {
+      "item_id": "UCAI-BENCH-080",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.599,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2605.27700) and publication year (2026) are from the future. Additionally, while papers on LLM citation hallucination detection exist, this specific title, author list, and exact qua"
+    },
+    {
+      "item_id": "UCAI-BENCH-081",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.591,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2605.25415) and publication year (2026) are in the future, making this citation impossible to verify and likely fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-082",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.541,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2605.26730) points to a future or non-existent paper (the year/month prefix 2605 indicates May 2026), and the specific statistics and benchmark name appear to be fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-083",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.735,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation features a future date (2026) and a fabricated arXiv identifier that does not exist in the real repository, making both the paper and its specific experimental claims unverifiable and fictiti"
+    },
+    {
+      "item_id": "UCAI-BENCH-084",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.917,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The arXiv ID 2511.02824 is invalid (month '11' is in the future relative to typical baseline dates, and arxiv IDs follow YYMM format where YY is 07-24/25 current), and the specific accuracy metrics cited appea"
+    },
+    {
+      "item_id": "UCAI-BENCH-085",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.651,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The claims attribute specific benchmarks (GPQA Diamond accuracy and KIRA6 therapeutic window in AML) to 'The AI Scientist', which actually describes an automated system for generating machine learning res"
+    },
+    {
+      "item_id": "UCAI-BENCH-086",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.596,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"While the paper 'Towards an AI co-scientist' (arXiv:2502.18864) by Gottweis et al. (2025) exists and discusses AI in scientific discovery, the specific claim that it achieves 98.4% top-1 accuracy on GPQA "
+    },
+    {
+      "item_id": "UCAI-BENCH-087",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 0,
+      "clean_ok": true,
+      "latency_sec": 0.686,
+      "raw_reply": "{\n  \"corrupted\": false,\n  \"reason\": \"The citation matches arXiv:2409.13740 by Skarlinski et al. (2024), and the specific experimental claims regarding Claude-3.5-Sonnet under Self-Debug align with the paper's reported results for automated "
+    },
+    {
+      "item_id": "UCAI-BENCH-088",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.978,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation exists (ScienceAgentBench, arXiv:2410.05080), but the specific claim about Claude-3.5-Sonnet achieving a 92.9% success rate and 84.0% valid execution rate under 'Self-Debug without expert kno"
+    },
+    {
+      "item_id": "UCAI-BENCH-089",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.604,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The arXiv ID 2506.08140 is from the future (June 2025) and does not exist. Furthermore, the specific claims about 'AutoSDT' and 'AI Scientist V2' producing 100% faked results across 10 ICLR 2025 tasks appear t"
+    },
+    {
+      "item_id": "UCAI-BENCH-090",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.651,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID and DOI (2505.19955) correspond to a date in the future (May 2025), which does not exist yet at the time of this check. Additionally, the specific claim about 'AI Scientist V2' producing 12% "
+    },
+    {
+      "item_id": "UCAI-BENCH-091",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.179,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains a futuristic arXiv ID and publication year (2026), and the authors and metrics do not correspond to a verified, real academic paper.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-092",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.704,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2605.27700) and publication year (2026) are in the future, and the specific metrics cited do not correspond to a verified, published paper by these authors with this exact DOI/arXiv "
+    },
+    {
+      "item_id": "UCAI-BENCH-093",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.307,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID and DOI (2605.25415) correspond to a future date (May 2026), and the paper details (such as specific hallucination rates for 'Reviewer2' and 'CycleReviewer' on 600 PRISM papers) do not corres"
+    },
+    {
+      "item_id": "UCAI-BENCH-094",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.519,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2605.26730) and publication year (2026) are from the future, making this citation and claim fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-095",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.677,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation features a future date (2026) and a non-existent arXiv ID, indicating a hallucinated paper and claim.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-096",
+      "label_class": "NUMERIC_MISATTRIBUTION",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.716,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2511.02824) references a future date (November 2025) and does not exist. Furthermore, claiming 950.5% accuracy is mathematically impossible.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-097",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\n  \"corrupted\": true,\n  \"reason\": \"While the paper title, authors, and DOI/arXiv ID are correct, the claim is inaccurate. The paper states that each paper generated by The AI Scientist costs approximately $15 (not $1500), and its g"
+    },
+    {
+      "item_id": "UCAI-BENCH-098",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The paper 'Towards an AI co-scientist' by Gottweis et al. (arXiv:2502.18864) does not exist in the arXiv repository, and the authors and specific claim details appear to be hallucinated.\"}\n```"
+    },
+    {
+      "item_id": "UCAI-BENCH-099",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The claim misrepresents the paper's results: PaperQA2 actually outperforms the human baseline on LitQA2 (achieving higher precision, around 85.2% vs. human baseline), rather than underperforming it as "
+    },
+    {
+      "item_id": "UCAI-BENCH-100",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 0,
+      "raw_reply": "```json\n{\"corrupted\": false, \"reason\": \"The citation details match the real ScienceAgentBench paper (arXiv:2410.05080), and the claimed results regarding Claude-3.5-Sonnet's performance under Self-Debug align with the paper's reported findi"
+    },
+    {
+      "item_id": "UCAI-BENCH-101",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2506.08140) and DOI (10.48550/arXiv.2506.08140) point to a future date (June 2025) and are currently nonexistent or invalid. Furthermore, the paper title, authors, and specific claim"
+    },
+    {
+      "item_id": "UCAI-BENCH-102",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "raw_reply": "```json\n{\"corrupted\": true, \"reason\": \"The arXiv ID (2505.19955) and DOI are from the future (May 2025), and the claim that an AI agent completely eliminates faked results and reduces hallucinations to zero across ICLR 2025 tasks is exagger"
+    },
+    {
+      "item_id": "UCAI-BENCH-103",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.793,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The claim is factually incorrect and logically implausible. While LLMs do generate non-existent ('ghost') citations, studies show that human authors and peer reviewers frequently fail to catch them, meani"
+    },
+    {
+      "item_id": "UCAI-BENCH-104",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.773,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The authors, specific model versions (like Claude Sonnet 4.6), and the year 2026 are anachronistic or fabricated, and the specific claim about performance metrics on physics references is not from a verif"
+    },
+    {
+      "item_id": "UCAI-BENCH-105",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.601,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID and DOI (2605.25415) represent a futuristic date (May 2026), and GPT-5.4 does not currently exist. Furthermore, claiming 100% resistance to all adversarial prompt injections across hundreds o"
+    },
+    {
+      "item_id": "UCAI-BENCH-106",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.475,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID (2605.26730) and publication year (2026) are from the future, making the citation and its specific experimental claims unverifiable and fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-107",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.417,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation references a paper from the year 2026 with an arXiv identifier that does not exist or is from the future, making the reference and the specific benchmark claims fabricated.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-108",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.599,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID and DOI (2511.02824) correspond to a future/non-existent date (November 2025), and the authors and specific accuracy claims do not match any known real paper under this title.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-109",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.863,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The claim is factually incorrect based on the paper. The AI Scientist costs significantly less per paper (around $15) rather than $1500, and it generates valid machine learning research that achieved pass"
+    },
+    {
+      "item_id": "UCAI-BENCH-110",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 1.012,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"While the paper 'Towards an AI co-scientist' (arXiv:2502.18864, February 2025 by Gottweis, Weng, Tu, et al.) is real, the specific claim about achieving 78.4% accuracy on GPQA Diamond and failing wet-lab "
+    },
+    {
+      "item_id": "UCAI-BENCH-111",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.544,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The paper 'Language Agents Achieve Superhuman Synthesis of Scientific Knowledge' (arXiv:2409.13740) reports that PaperQA2 actually *outperforms* the human baseline on LitQA2 (85.2% vs 73.8%), achieving superhu"
+    },
+    {
+      "item_id": "UCAI-BENCH-112",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.689,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The paper 'ScienceAgentBench' (arXiv:2410.05080) reports that Claude-3.5-Sonnet achieves a 22.9% success rate under the 'Zero-shot' setting, but its performance actually improves significantly (reaching higher"
+    },
+    {
+      "item_id": "UCAI-BENCH-113",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.859,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID 2506.08140 and the authors/title combination refer to a future or nonexistent paper, as arXiv IDs do not currently reach the 2506 series (which would correspond to June 2025). The specific cl"
+    },
+    {
+      "item_id": "UCAI-BENCH-114",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 1.005,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID 2505.19955 is from the future (May 2025) and does not exist. Furthermore, the claim about 'AI Scientist V2' eliminating faked results and reducing hallucinated methodology to zero across 10 I"
+    },
+    {
+      "item_id": "UCAI-BENCH-115",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.783,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The claim states that ghost citations completely disappear before publication into PMC, which contradicts the fundamental premise of studying LLM hallucinations in published literature; moreover, the arXi"
+    },
+    {
+      "item_id": "UCAI-BENCH-116",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.622,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation contains implausible future dates (2026), a non-existent arXiv ID format, and references future or fictional model versions like Claude Sonnet 4.6.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-117",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.827,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv ID and DOI (2605.25415) represent a futuristic date (May 2026) and the models mentioned (GPT-5.4) do not exist as of the current knowledge cutoff, making this a hallucinated citation and claim.\""
+    },
+    {
+      "item_id": "UCAI-BENCH-118",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 0.635,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The arXiv identifier (2605.26730) and publication year (2026) are from the future. The paper and specific benchmark claims do not exist in the real scientific literature.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-119",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 1.099,
+      "raw_reply": "{\n  \"corrupted\": true,\n  \"reason\": \"The citation features a future year (2026), an invalid arXiv ID format for the current timeline, and refers to a fictional or non-existent paper and benchmark metrics.\"\n}"
+    },
+    {
+      "item_id": "UCAI-BENCH-120",
+      "label_class": "POLARITY_REVERSAL",
+      "is_corrupted": 1,
+      "pred_corrupted": 1,
+      "clean_ok": true,
+      "latency_sec": 16.288,
+      "raw_reply": "{\"corrupted\": true, \"reason\": \"The arXiv ID 2511.02824 is invalid as the month 11 (November) of the year 2025 has not occurred yet, and the authors and paper details do not correspond to a verified real publication.\"}"
+    }
+  ]
+}

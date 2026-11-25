@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ucai-verify"
+version = "0.2.0"
+description = "Zero-Fake-Citation & Cross-Document Numeric Audit Engine with Two-Stage Hybrid Verification"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Noppadon Chaiwisut & UCAI Research Group" }
+]
+keywords = ["citation-verification", "hallucination-detection", "scientific-nlp", "numeric-audit", "open-science"]
+dependencies = [
+  "requests>=2.31.0",
+  "pymupdf>=1.24.0",
+]
+
+[project.optional-dependencies]
+hybrid = [
+  "sentence-transformers>=3.0.0",
+  "google-genai>=1.0.0",
+]
+eval = [
+  "matplotlib>=3.8.0",
+  "pandas>=2.1.0",
+  "sentence-transformers>=3.0.0",
+  "google-genai>=1.0.0",
+]
+
+[project.scripts]
+ucai-verify = "cli:main"
+
+[tool.setuptools]
+packages = ["ucai_verify"]
+py-modules = ["cli"]

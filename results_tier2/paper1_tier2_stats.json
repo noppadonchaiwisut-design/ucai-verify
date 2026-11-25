@@ -1,0 +1,20 @@
+{
+  "hnli_vs_llm_judge": {
+    "a_right_b_wrong": 17,
+    "a_wrong_b_right": 4,
+    "discordant": 21,
+    "p_value": 0.007197
+  },
+  "hgem_vs_llm_judge": {
+    "a_right_b_wrong": 21,
+    "a_wrong_b_right": 0,
+    "discordant": 21,
+    "p_value": 1e-06
+  },
+  "stage1_vs_llm_judge": {
+    "a_right_b_wrong": 23,
+    "a_wrong_b_right": 22,
+    "discordant": 45,
+    "p_value": 1.0
+  }
+}
